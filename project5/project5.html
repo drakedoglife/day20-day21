@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>laugh</title>
+	<style>
+		#pic {
+			background-image: url('123.jpg');
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			width:480px;
+			height:480px;
+			margin:0 auto;
+		}
+	</style>
+	<script>
+		var n = 0;
+		var m = 16;
+		function func1() {
+			var a = document.getElementById('pic');
+			if(n < 17) {
+				a.style.backgroundPosition = 0 + 'px ' + -480*n + 'px';
+				n++;
+				var t = setTimeout('func1()', 70);
+			}
+			else if(n >= 17) {
+				clearTimeout(t);
+				func2();
+			}
+		}
+		function func2() {
+			var a = document.getElementById('pic');
+			if(m > 0) {
+				a.style.backgroundPosition = 0 + 'px ' + -480*m + 'px';
+				m--;
+				var p = setTimeout('func2()', 70);
+			}
+			else if(m <= 0) {
+				clearTimeout(p);
+			}
+		}
+	</script>
+</head>
+<body onload="func1()">
+	<div id='pic'></div>
+</body>
+</html>

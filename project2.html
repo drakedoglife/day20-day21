@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+    <script>
+        function func1() {
+            var a = document.getElementById('school-select');
+            var b = document.getElementById('company-select');
+            a.style.display = 'inline';
+            b.style.display = 'none';
+        }
+
+        function func2() {
+            var a = document.getElementById('school-select');
+            var b = document.getElementById('company-select');
+            a.style.display = 'none';
+            b.style.display = 'inline';
+        }
+    </script>
+</head>
+<body>            
+    <label onclick="func1()">
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label onclick="func2()">
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件</title>
+	<script>
+		function btnfunc() {
+			console.log(document.querySelector('#name').value);
+		}
+		function inputfunc() {
+			if(event.which == 13) {
+				console.log(document.querySelector('#name').value);
+			}
+			else if(window.event.which == 27) {
+				document.getElementById('name').value = "";
+			}
+		}
+	</script>
+</head>
+<body>
+	<input id="name" type="text" onkeypress="inputfunc()">    
+	<button id="submit-btn" onclick="btnfunc()">Submit</button>
+</body>
+</html>
